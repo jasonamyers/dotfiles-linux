@@ -6,7 +6,7 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 alias ls='ls -G'  
 alias ll='ls -hlatr --color'
 alias gg='history | grep'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias vim='mvim -v'
 
 export GIT_EDITOR="mvim" 
 #source /usr/local/git/contrib/completion/git-completion.bash
