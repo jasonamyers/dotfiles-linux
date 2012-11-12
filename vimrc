@@ -125,6 +125,7 @@ set wildignore+=*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif
 
 
 map ` :NERDTreeToggle<CR>" map F3 to open NERDTree
+map ~ :FuzzyFinderBuffer<CR>
 map <leader>ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
 
 set enc=utf-8
