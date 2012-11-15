@@ -15,3 +15,8 @@ You might also need the following:
 Homebrew - ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 brew doctor
 homebrew install git bash-completion python
+git config --global color.ui auto
+git config --global core.autocrlf input
+git config --global user.name "Name"
+git config --global user.email "name@domain.com"
+
