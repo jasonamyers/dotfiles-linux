@@ -20,3 +20,8 @@ git config --global core.autocrlf input
 git config --global user.name "Name"
 git config --global user.email "name@domain.com"
 
+git config --global core.excludesfile "~/.gitignore"
+
+add .DS_Store and thumbs.db to that file
+
+
