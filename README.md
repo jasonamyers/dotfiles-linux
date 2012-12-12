@@ -4,12 +4,14 @@ This is my collection of dot files for my mac systems. Greatly copied from binar
 
 To use them:
 
-git clone it into your home directory
-rename your current .bash_profile .bashrc .vim .vimrc
-ln -s ~/dotfiles/bash_profile .bash_profile
-ln -s ~/dotfiles/bashrc .bashrc
-ln -s ~/dotfiles/vimfolder .vim
-ln -s ~/dotfiles/vimrc .vimrc
+* git clone it into your home directory
+* rename your current .bash_profile .bashrc .vim .vimrc
+* ln -s ~/dotfiles/bash_profile .bash_profile
+* ln -s ~/dotfiles/bashrc .bashrc
+* ln -s ~/dotfiles/vimfolder .vim
+* ln -s ~/dotfiles/vimrc .vimrc
+
+
 You might also need the following first:
 
 Homebrew - 
