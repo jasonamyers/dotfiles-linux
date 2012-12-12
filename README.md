@@ -10,12 +10,12 @@ ln -s ~/dotfiles/bash_profile .bash_profile
 ln -s ~/dotfiles/bashrc .bashrc
 ln -s ~/dotfiles/vimfolder .vim
 ln -s ~/dotfiles/vimrc .vimrc
-You might also need the following:
+You might also need the following first:
 
 Homebrew - 
 * ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 * brew doctor
-* homebrew install git bash-completion python
+* brew install git bash-completion python
 * git config --global color.ui auto
 * git config --global core.autocrlf input
 * git config --global user.name "Name"
