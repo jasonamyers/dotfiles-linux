@@ -6,13 +6,9 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 alias ls='ls -G'  
 alias ll='ls -hlatr --color'
 alias gg='history | grep'
-alias vim='mvim -v'
 
-export GIT_EDITOR="mvim" 
-#source /usr/local/git/contrib/completion/git-completion.bash
+export GIT_EDITOR="vim" 
 GIT_PS1_SHOWDIRTYSTATE=true
-#export PS1='[mattgeorge:\w$(__git_ps1)] \[\033[01;32m\]\u\[\033[00m\]\$ '
-#export PS1='[\u@\h:\w$(__git_ps1)] \[\033[01;32m\]\u\[\033[00m\]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
 export COMMAND_MODE=unix2003
 export TM_PYCHECKER=pylint
