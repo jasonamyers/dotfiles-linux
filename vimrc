@@ -108,6 +108,7 @@ if has("autocmd")
     " Automatically chmod +x Shell scripts
     au BufWritePost   *.sh             !chmod +x %
 
+    au BufNewFile,BufRead *.jinja2 set filetype=html
     
 endif
 
