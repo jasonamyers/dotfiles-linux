@@ -19,3 +19,6 @@
 [submodule "vimfolder/bundle/surround"]
 	path = vimfolder/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vimfolder/bundle/neocomplcache"]
+	path = vimfolder/bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache
