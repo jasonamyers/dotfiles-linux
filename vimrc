@@ -21,7 +21,8 @@ set tabstop=4
 set shiftwidth=4
 
 set foldmethod=indent
-set nofoldenable
+set foldlevel=99
+"set nofoldenable
 
 set hidden
 
@@ -115,6 +116,7 @@ endif
 map <F1> :bnext<cr>
 map <F2> :bprevious<cr>
 map <F4> :Bclose<cr>
+set pastetoggle=<F5>
 
 " Show me where I'm exceeding 80 chars on a line
 :match ErrorMsg '\%>80v.\+'
