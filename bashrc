@@ -6,6 +6,13 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 alias ls='ls -G'  
 alias ll='ls -hlatr --color'
 alias gg='history | grep'
+#alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
+alias breakitdown="history | awk '{a[$2]++ } END{for(i in a){print a[i] ' ' i}}'|sort -rn |head -n 20"
+alias cleanpyc='find . -type f -name "*.pyc" -delete'
+alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
+alias pms='python manage.py runserver'
 
 export GIT_EDITOR="vim" 
 GIT_PS1_SHOWDIRTYSTATE=true

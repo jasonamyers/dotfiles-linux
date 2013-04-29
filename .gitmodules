@@ -22,3 +22,6 @@
 [submodule "vimfolder/bundle/snipmate"]
 	path = vimfolder/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vimfolder/bundle/vim-buffergator"]
+	path = vimfolder/bundle/vim-buffergator
+	url = git@github.com:jeetsukumaran/vim-buffergator.git

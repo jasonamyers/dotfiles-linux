@@ -31,6 +31,7 @@ set laststatus=2
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell    " turn off visual bell
 set vb
+set shiftround
 set nobackup        " do not keep a backup file
 set noswapfile
 set number          " show line numbers
