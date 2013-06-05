@@ -66,6 +66,7 @@ syntax on
 set expandtab
 set sm
 set smarttab
+:set t_Co=256
 if has("gui_running")
     " See ~/.gvimrc
     set guifont=Menlo:h14.00  " use this font
@@ -76,8 +77,9 @@ if has("gui_running")
     autocmd filetype html,xml set listchars-=tab:▷⋅.
     colorscheme jellybeans
 else
-    colorscheme vibrantink   " use this color scheme
-    colorscheme jellybeans
+    "colorscheme vibrantink   " use this color scheme
+    "colorscheme grb256
+    colorscheme solarized
     set guifont=Menlo:h14.00  " use this font
     set background=dark   " adapt colors for background
 endif

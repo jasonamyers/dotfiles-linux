@@ -25,3 +25,6 @@
 [submodule "vimfolder/bundle/vim-buffergator"]
 	path = vimfolder/bundle/vim-buffergator
 	url = git@github.com:jeetsukumaran/vim-buffergator.git
+[submodule "vimfolder/bundle/solarized"]
+	path = vimfolder/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
