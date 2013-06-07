@@ -27,8 +27,22 @@ alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/se
 alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 alias pms='python manage.py runserver'
-alias pmsh='python manage.py shell'
+alias pmshell='python manage.py shell'
 alias pmdb='python manage.py dbshell'
+alias md='mkdir -p'
+alias rd='rmdir'
+alias d='dirs -v'
+alias g='git'
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff -w "$@" | vim'
+alias gc='git commit -v'
+alias gca='git commit -va'
+alias gco='git checkout'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -d'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 # If not running interactively, don't do anything

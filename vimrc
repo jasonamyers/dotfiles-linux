@@ -139,6 +139,7 @@ set fileformats=unix,dos,mac
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_loc_list_height=3
+:command C let @/=""
 " Syntastic checks syntax with flake8/pyflakes/pylint
 let g:syntastic_python_checker = 'flake8'
 " flake8 - Warn when complexity over 12 in flakes, ignore longline warnings on PEP8
