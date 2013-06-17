@@ -1,1 +1,266 @@
-(nil)
+((("data_sets" .
+   [1 0 0 0 0 0 0 0 0])
+  ("queue" .
+   [0 0 0 1 0])
+  ("pagination" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("end" .
+   [1 0 0])
+  ("start" .
+   [1 0 0 0 0])
+  ("view_queue" .
+   [0 0 0 1 5 0 0 0 0 0])
+  ("pyres" .
+   [2 0 0 0 0])
+  ("Overview" .
+   [1 0 0 0 0 0 0 0])
+  ("data" .
+   [14 0 0 1])
+  ("initial" .
+   [5 0 0 0 0 0 0])
+  ("fields" .
+   [3 0 0 0 0 0])
+  ("POST" .
+   [1 0 0 0])
+  ("dataset_id" .
+   [4 0 0 0 0 0 0 1 0 0])
+  ("item" .
+   [2 0 0 0])
+  ("request" .
+   [3 0 0 0 0 0 0])
+  ("form_data" .
+   [1 0 0 0 0 0 0 0 0])
+  ("base" .
+   [2 0 0 0])
+  ("remove" .
+   [2 0 0 0 0 0])
+  ("close" .
+   [1 0 0 0 0])
+  ("connection" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("cls" .
+   [10 0 0])
+  ("initialize_sql" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("create_all" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("metadata" .
+   [2 0 0 0 1 0 0 0])
+  ("Base" .
+   [3 0 0 0])
+  ("bind" .
+   [3 0 0 0])
+  ("configure" .
+   [2 0 0 0 0 0 0 0 0])
+  ("DBSession" .
+   [4 0 1 1 0 0 0 0 0])
+  ("engine" .
+   [6 0 0 0 0 0])
+  ("types" .
+   [1 0 0 0 0])
+  ("sqlalchemy" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("c" .
+   [1])
+  ("NullType" .
+   [1 0 0 1 0 0 0 0])
+  ("isinstance" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("field_mapping" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("name" .
+   [4 0 0 0])
+  ("column" .
+   [3 0 0 0 0 0])
+  ("s" .
+   [7])
+  ("i" .
+   [6])
+  ("t" .
+   [2])
+  ("unavailable_fields" .
+   [0 0 0 1 3 3 0 0 0 1 0 1 0 0 0 0 0 0])
+  ("lambda" .
+   [0 0 0 0 0 1])
+  ("sucratrend" .
+   [2 0 0 0 0 2 0 0 0 0])
+  ("BaseTestCase" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("UnitTestBase" .
+   [0 0 0 3 0 0 0 0 0 0 0 0])
+  ("models" .
+   [2 0 1 0 0 0])
+  ("auth" .
+   [1 0 0 0])
+  ("Roles" .
+   [5 0 0 0 0])
+  ("setUp" .
+   [2 0 0 0 0])
+  ("self" .
+   [36 0 0 0])
+  ("description" .
+   [2 0 0 0 0 0 0 0 1 0 0])
+  ("session" .
+   [3 0 0 0 1 0 0])
+  ("role1" .
+   [1 0 0 0 0])
+  ("role2" .
+   [1 0 0 0 0])
+  ("by_id" .
+   [1 0 0 0 0])
+  ("role" .
+   [2 0 0 0])
+  ("assertEquals" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("TestRoles" .
+   [2 0 0 0 0 0 0 0 0])
+  ("role_id" .
+   [0 0 0 0 1 0 0])
+  ("row_counts" .
+   [1 0 0 0 0 1 0 0 0 0])
+  ("get" .
+   [15 0 0])
+  ("year" .
+   [2 0 0 0])
+  ("providers" .
+   [7 0 0 0 0 0 0 0 1])
+  ("return_val" .
+   [7 0 0 0 0 0 0 0 0 0])
+  ("totals_dict" .
+   [7 0 0 0 0 0 2 0 0 0 0])
+  ("providers_dict" .
+   [3 0 0 0 0 0 0 0 0 1 0 1 2 0])
+  ("graph_data" .
+   [19 0 0 0 0 5 0 0 0 0])
+  ("timeframes_dict" .
+   [2 0 0 0 2 1 1 0 0 0 0 0 0 1 0])
+  ("provider" .
+   [18 0 0 0 0 0 0 0])
+  ("append" .
+   [8 0 0 0 0 0])
+  ("Counter" .
+   [1 0 0 0 0 0 0])
+  ("defaultdict" .
+   [2 0 0 0 1 0 0 1 0 0 0])
+  ("result" .
+   [1 0 0 0 0 0])
+  ("discharge_qtr" .
+   [0 0 0 1 0 2 0 0 0 0 0 0 0])
+  ("generate_graph_data" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("timeframe" .
+   [2 0 0 0 0 0 0 0 0])
+  ("quarter" .
+   [1 0 0 0 0 0 0])
+  ("timeframe_str" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("patient" .
+   [1 0 0 0 0 0 0])
+  ("patient_discharges" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("market_share" .
+   [3 0 0 0 0 0 0 0 0 0 0 0])
+  ("product_line" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("json" .
+   [2 1 0 0])
+  ("json_graph_data" .
+   [4 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("providers_base" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("reversed" .
+   [0 0 0 1 0 0 0 0])
+  ("reverse" .
+   [2 0 0 0 0 0 0])
+  ("dumps" .
+   [2 0 0 0 0])
+  ("view_ov" .
+   [3 0 0 3 10 1 2])
+  ("queues" .
+   [3 0 0 1 0 0])
+  ("workers" .
+   [3 0 0 1 0 0 0])
+  ("empty_workers" .
+   [2 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("worker_size" .
+   [1 0 0 0 1 0 1 0 0 0 0])
+  ("total_workers" .
+   [1 0 0 0 0 1 1 0 0 0 0 0 0])
+  ("fail_count" .
+   [1 0 0 0 1 0 0 0 0 1])
+  ("version" .
+   [1 0 0 2 0 0 0])
+  ("resweb_version" .
+   [0 0 0 1 0 1 1 0 0 0 0 0 0 0])
+  ("address" .
+   [2 0 0 1 0 0 0])
+  ("Working" .
+   [1 0 0 0 0 0 0])
+  ("view_working" .
+   [9 0 0 0 7 0 0 0 0 0 0 0])
+  ("Queues" .
+   [0 0 0 0 0 1])
+  ("view_queues" .
+   [6 0 0 0 3 2 0 0 0 0 0])
+  ("Failed" .
+   [1 0 0 0 0 0])
+  ("g" .
+   [1])
+  ("render_template" .
+   [1 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("failed_jobs" .
+   [1 0 0 1 0 1 0 0 0 0 0])
+  ("view_failed" .
+   [1 0 0 0 4 0 0 3 1 0 0])
+  ("url_for" .
+   [3 0 0 0 0 0 0])
+  ("view_workers" .
+   [3 0 0 0 3 0 0 0 0 0 0 0])
+  ("size" .
+   [3 0 0 0])
+  ("view_worker" .
+   [0 0 0 0 10 0 0 0 0 0 0])
+  ("host" .
+   [1 0 0 0])
+  ("pid" .
+   [1 0 0])
+  ("state" .
+   [0 0 0 0 1])
+  ("started_at" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("processed" .
+   [0 0 0 1 0 0 0 0 0])
+  ("failed" .
+   [0 1 0 0 0 0])
+  ("runat" .
+   [0 0 1 0 0])
+  ("view_delayed" .
+   [0 0 0 0 0 0 0 3 2 2 1 0])
+  ("jobs" .
+   [0 0 2 0])
+  ("view_dt" .
+   [10 0 0 0 0 0 0])
+  ("formated_timestamp" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("view_stats" .
+   [2 0 0 0 3 0 0 0 0 0])
+  ("sub_nav" .
+   [0 0 0 0 1 0 0])
+  ("title" .
+   [0 0 0 1 0])
+  ("key" .
+   [2 0 0])
+  ("stats" .
+   [0 0 0 0 1])
+  ("stat_id" .
+   [1 0 0 0 0 0 0])
+  ("key_type" .
+   [1 0 0 0 0 0 0 0])
+  ("items" .
+   [1 0 0 0 0])
+  ("view_stat" .
+   [0 0 0 0 1 0 0 0 0])
+  ("district" .
+   [1 0 0 0 0 0 0 0])
+  ("district_name" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])))

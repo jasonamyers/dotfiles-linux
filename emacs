@@ -43,3 +43,29 @@
          (add-to-list 'flymake-allowed-file-name-masks 
                   '("\\.py\\'" flymake-pyflakes-init))) 
    (add-hook 'find-file-hook 'flymake-find-file-hook)
+(global-set-key (kbd "C-x j") 'python-django-open-project)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((python-shell-completion-string-code . "';'.join(get_ipython().Completer.all_completions('''%s'''))
+") (python-shell-completion-module-string-code . "';'.join(module_completion('''%s'''))
+") (python-shell-completion-setup-code . "from IPython.core.completerlib import module_completion") (python-shell-interpreter-args . "/Users/jasonamyers/src/health/health/manage.py shell") (python-shell-interpreter . "python")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(autoload 'django-html-mumamo-mode "~/.emacs.d/nxhtml/autostart.el")
+(setq auto-mode-alist
+      (append '(("\\.html?$" . django-html-mumamo-mode)) auto-mode-alist))
+(setq mumamo-background-colors nil) 
+(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mumamo-mode))
+ (setq backup-directory-alist
+          `((".*" . ,temporary-file-directory)))
+    (setq auto-save-file-name-transforms
+          `((".*" ,temporary-file-directory t)))

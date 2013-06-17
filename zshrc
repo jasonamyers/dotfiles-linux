@@ -26,7 +26,7 @@ alias cleanpyc='find . -type f -name "*.pyc" -delete'
 alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
-alias pms='python manage.py runserver'
+alias pmr='python manage.py runserver'
 alias pmshell='python manage.py shell'
 alias pmdb='python manage.py dbshell'
 alias md='mkdir -p'
