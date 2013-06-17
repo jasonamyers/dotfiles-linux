@@ -66,7 +66,7 @@ syntax on
 set expandtab
 set sm
 set smarttab
-:set t_Co=256
+set t_Co=256
 if has("gui_running")
     " See ~/.gvimrc
     set guifont=Menlo:h14.00  " use this font
@@ -79,9 +79,13 @@ if has("gui_running")
 else
     "colorscheme vibrantink   " use this color scheme
     "colorscheme grb256
+    set background=dark   " adapt colors for background
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+    let g:solarized_visibility="high"
+    let g:solarized_contract="high"
     colorscheme solarized
     set guifont=Menlo:h14.00  " use this font
-    set background=dark   " adapt colors for background
 endif
 
 if has("gui_running")
@@ -146,3 +150,5 @@ let g:syntastic_python_checker = 'flake8'
 let g:syntastic_python_checker_args = "--max-complexity 13 --ignore=E501,E128"
 " Check files on open and save
 let g:syntastic_check_on_open=1
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview

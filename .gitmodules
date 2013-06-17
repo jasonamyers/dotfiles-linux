@@ -34,3 +34,9 @@
 [submodule "vimfolder/bundle/supertab"]
 	path = vimfolder/bundle/supertab
 	url = https://github.com/ervandew/supertab
+[submodule "vimfolder/bundle/vim-colors-solarized"]
+	path = vimfolder/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vimfolder/bundle/taglist"]
+	path = vimfolder/bundle/taglist
+	url = https://github.com/thisivan/vim-taglist
