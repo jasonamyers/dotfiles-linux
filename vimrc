@@ -80,6 +80,9 @@ else
     "colorscheme vibrantink   " use this color scheme
     "colorscheme grb256
     set background=dark   " adapt colors for background
+    let g:Powerline_colorscheme = 'solarized256'
+    let g:Powerline_theme = 'solarized256'
+    let g:Powerline_symbols = "fancy"
     let g:solarized_termcolors=256
     let g:solarized_termtrans=1
     let g:solarized_visibility="high"

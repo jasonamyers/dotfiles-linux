@@ -13,6 +13,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 export ZSH_THEME="agnoster"
 export DEFAULT_USER="jasonamyers"
+export PGHOST=localhost
 autoload -U compinit
 compinit
 
@@ -57,20 +58,19 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:[ ]*:ls:ll:la:l:cd:pwd:exit:mc:su:df:clear"
 
 export WORKON_HOME=$HOME/.virtualenv
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/Cellar/python/2.7.3/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/Cellar/python/2.7.5/bin/python
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 export PROJECT_HOME=$HOME/Develop
-if [[ -r /usr/local/share/python/virtualenvwrapper.sh ]]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
+if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
 else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias tmux="TERM=screen-256color-bce tmux"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -94,5 +94,3 @@ plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux, virtualenvwrapper)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/jasonamyers/.rvm/gems/ruby-1.9.3-p392/bin:/Users/jasonamyers/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/jasonamyers/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/jasonamyers/.rvm/bin:/usr/local/Cellar/python/2.7.3/bin:/usr/local/share/python:/usr/local/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/jasonamyers/bin:/usr/local/sbin:/Users/jasonamyers/.rbenv/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
