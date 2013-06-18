@@ -137,6 +137,9 @@ set wildignore+=*.pyc,*.zip,*.gz,*.bz,*.tar,*.jpg,*.png,*.gif
 map ` :NERDTreeToggle<CR>" map F3 to open NERDTree
 map ~ :FuzzyFinderBuffer<CR>
 map <leader>ft :%s/	/    /g<CR> " replace all tabs with 4 spaces
+map <silent> <C-N> :silent noh<CR> " turn off highlighted search
+map <F7> :TlistToggle<CR> " map F7 to toggle the Tag Listing
+ 
 
 set enc=utf-8
 set fileformats=unix,dos,mac
