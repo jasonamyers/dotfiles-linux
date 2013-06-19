@@ -92,5 +92,8 @@ alias tmux="TERM=screen-256color-bce tmux"
 plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux, virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
-
+source .zsh/func/color_cmds
 # Customize to your needs...
+alias ssh=color-ssh
+alias pmr=color-pmr
+alias pg=color-psql
