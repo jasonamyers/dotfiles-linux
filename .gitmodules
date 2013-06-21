@@ -19,9 +19,6 @@
 [submodule "vimfolder/bundle/surround"]
 	path = vimfolder/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vimfolder/bundle/snipmate"]
-	path = vimfolder/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
 [submodule "vimfolder/bundle/vim-buffergator"]
 	path = vimfolder/bundle/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator.git
