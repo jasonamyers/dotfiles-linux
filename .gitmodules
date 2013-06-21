@@ -40,3 +40,6 @@
 [submodule "vimfolder/bundle/keyboard_cat"]
 	path = vimfolder/bundle/keyboard_cat
 	url = git@github.com:natw/keyboard_cat.vim.git
+[submodule "vimfolder/bundle/Command-T"]
+	path = vimfolder/bundle/Command-T
+	url = git@github.com:wincent/Command-T.git
