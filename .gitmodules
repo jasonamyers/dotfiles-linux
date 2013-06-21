@@ -37,3 +37,6 @@
 [submodule "vimfolder/bundle/taglist"]
 	path = vimfolder/bundle/taglist
 	url = https://github.com/thisivan/vim-taglist
+[submodule "vimfolder/bundle/keyboard_cat"]
+	path = vimfolder/bundle/keyboard_cat
+	url = git@github.com:natw/keyboard_cat.vim.git
