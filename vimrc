@@ -88,7 +88,7 @@ else
     let g:solarized_visibility="high"
     let g:solarized_contract="high"
     colorscheme solarized
-    set guifont=Menlo:h14.00  " use this font
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h14.00  " use this font
 endif
 
 if has("gui_running")

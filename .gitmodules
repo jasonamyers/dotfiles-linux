@@ -13,9 +13,6 @@
 [submodule "vimfolder/bundle/syntastic"]
 	path = vimfolder/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vimfolder/bundle/powerline"]
-	path = vimfolder/bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vimfolder/bundle/surround"]
 	path = vimfolder/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
@@ -43,3 +40,6 @@
 [submodule "vimfolder/bundle/Command-T"]
 	path = vimfolder/bundle/Command-T
 	url = git@github.com:wincent/Command-T.git
+[submodule "vimfolder/bundle/airline"]
+	path = vimfolder/bundle/airline
+	url = git@github.com:bling/vim-airline.git

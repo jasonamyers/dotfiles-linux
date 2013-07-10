@@ -58,7 +58,7 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:[ ]*:ls:ll:la:l:cd:pwd:exit:mc:su:df:clear"
 
 export WORKON_HOME=$HOME/.virtualenv
-export VIRTUALENVWRAPPER_PYTHON=/opt/boxen/homebrew/Cellar/python/2.7.5/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 export PROJECT_HOME=$HOME/Develop
@@ -89,7 +89,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux, virtualenvwrapper)
+plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux)
 
 source $ZSH/oh-my-zsh.sh
 source .zsh/func/color_cmds
@@ -97,4 +97,3 @@ source .zsh/func/color_cmds
 alias ssh=color-ssh
 alias pmr=color-pmr
 alias pg=color-psql
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
