@@ -92,8 +92,9 @@ alias tmux="TERM=screen-256color-bce tmux"
 plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux)
 
 source $ZSH/oh-my-zsh.sh
-source .zsh/func/color_cmds
+source ~/.zsh/func/color_cmds
 # Customize to your needs...
 alias ssh=color-ssh
 alias pmr=color-pmr
 alias pg=color-psql
+function colorcode () { highlight -O rtf $* --font Source\ Code\ Pro --style andes --src-lang python --font-size 36 | pbcopy }

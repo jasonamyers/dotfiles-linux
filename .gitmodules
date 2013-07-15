@@ -43,3 +43,6 @@
 [submodule "vimfolder/bundle/airline"]
 	path = vimfolder/bundle/airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "vimfolder/bundle/jslint"]
+	path = vimfolder/bundle/jslint
+	url = git://github.com/hallettj/jslint.vim.git

@@ -1,10 +1,16 @@
 let g:pathogen_disabled = []
+""""""""""""""""""""""""""""""
+" => Load pathogen paths
+""""""""""""""""""""""""""""""
 call pathogen#infect()
+call pathogen#helptags()
+
 syntax on
 filetype plugin indent on
 
 set nocompatible
 set backspace=indent,eol,start
+" Sets how many lines of history VIM has to remember
 set history=1000
 set scrolloff=3 
 
@@ -13,20 +19,24 @@ set viminfo=!,'100,\"100,:20,<50,s10,h,n~/.viminfo
 set showcmd
 set showmode
 
+" Highlight search results
 set hlsearch
+" Makes search act like search in modern browsers
 set incsearch
 
+" 1 tab == 4 spaces
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=1
 "set nofoldenable
 
 set hidden
 
 set ruler
+" Always show the status line
 set laststatus=2
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell    " turn off visual bell
@@ -61,10 +71,68 @@ let NERDTreeShowBookmarks=1
 
 " VCS Command Configs
 let mapleader = ","
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+nnoremap   <Up>     <NOP>
+nnoremap   <Down>   <NOP>
+nnoremap   <Left>   <NOP>
+nnoremap   <Right>  <NOP>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+autocmd Syntax html,vim inoremap < <lt>><Left>
+function! IsEmptyPair(str)
+    for pair in split( &matchpairs, ',' ) + [ "''", '""', '``' ]
+        if a:str == join( split( pair, ':' ),'' )
+            return 1
+        endif
+    endfor
+    return 0
+endfunc
+function! WithinEmptyPair()
+    let cur = strpart( getline('.'), col('.')-2, 2 )
+    return IsEmptyPair( cur )
+endfunc
+function! SkipDelim(char)
+    let cur = strpart( getline('.'), col('.')-2, 3 )
+    if cur[0] == "\\"
+        return a:char
+    elseif cur[1] == a:char
+        return "\<Right>"
+    elseif cur[1] == ' ' && cur[2] == a:char
+        return "\<Right>\<Right>"
+    elseif IsEmptyPair( cur[0] . a:char )
+        return a:char . "\<Left>"
+    else
+        return a:char
+    endif
+endfunc
+inoremap <expr> ) SkipDelim(')')
+inoremap <expr> ] SkipDelim(']')
+inoremap <expr> } SkipDelim('}')
+inoremap <expr> ' SkipDelim("'")
+inoremap <expr> " SkipDelim('"')
+inoremap <expr> ` SkipDelim('`')
+inoremap <expr> <BS>    WithinEmptyPair() ? "\<Right>\<BS>\<BS>"      : "\<BS>"
+inoremap <expr> <CR>    WithinEmptyPair() ? "\<CR>\<CR>\<Up>"         : "\<CR>"
+inoremap <expr> <Space> WithinEmptyPair() ? "\<Space>\<Space>\<Left>" : "\<Space>"
+vmap q( s()<C-R>"<Esc>
+vmap q) s()<C-R>"<Esc>
+vmap q[ s[]<C-R>"<Esc>
+vmap q] s[]<C-R>"<Esc>
+vmap q{ s{}<C-R>"<Esc>
+vmap q} s{}<C-R>"<Esc>
+vmap q' s''<C-R>"<Esc>
+vmap q" s""<C-R>"<Esc>
+vmap q` s``<C-R>"<Esc>
 
 syntax on
+" Use spaces instead of tabs
 set expandtab
 set sm
+" Be smart when using tabs ;)
 set smarttab
 set t_Co=256
 if has("gui_running")
@@ -77,12 +145,8 @@ if has("gui_running")
     autocmd filetype html,xml set listchars-=tab:▷⋅.
     colorscheme jellybeans
 else
-    "colorscheme vibrantink   " use this color scheme
-    "colorscheme grb256
     set background=dark   " adapt colors for background
-    let g:Powerline_colorscheme = 'solarized256'
-    "let g:Powerline_theme = 'solarized256'
-    let g:Powerline_symbols = "fancy"
+    let g:airline_powerline_fonts=1
     let g:solarized_termcolors=256
     let g:solarized_termtrans=1
     let g:solarized_visibility="high"
@@ -109,12 +173,32 @@ if has("autocmd")
     au FileType cpp,c,java,sh,pl,php,py,asp  set autoindent
     au FileType cpp,c,java,sh,pl,php,py,asp  set smartindent
     au FileType cpp,c,java,sh,pl,php,py,asp  set cindent
+    let python_version_2 = 1
+    let python_highlight_all = 1
+    syntax on
+    au FileType py syn keyword pythonDecorator True None False self
     au FileType py set foldmethod=indent
     au FileType py set textwidth=79  " PEP-8 friendly
     au FileType py inoremap # X#
+    au FileType python inoremap <buffer> $r return 
+    au FileType python inoremap <buffer> $i import 
+    au FileType python inoremap <buffer> $p print 
+    au FileType python map <buffer> <leader>1 /class 
+    au FileType python map <buffer> <leader>2 /def 
+    au FileType python map <buffer> <leader>C ?class 
+    au FileType python map <buffer> <leader>D ?def 
     au FileType py set expandtab
     au FileType py set omnifunc=pythoncomplete#Complete
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType c setlocal omnifunc=ccomplete#Complete
     autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+    autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
+    autocmd BufWritePost *.js JSLint
+    autocmd BufEnter * :syntax sync fromstart
+
+
     
     " Automatically chmod +x Shell scripts
     au BufWritePost   *.sh             !chmod +x %
@@ -123,6 +207,9 @@ if has("autocmd")
     
 endif
 
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 map <F1> :bnext<cr>
 map <F2> :bprevious<cr>
 map <F4> :Bclose<cr>
@@ -158,3 +245,83 @@ let g:syntastic_python_checker_args = "--max-complexity 13 --ignore=E501,E128"
 let g:syntastic_check_on_open=1
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>t<leader> :tabnext 
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
+
+function! VisualSelection(direction, extra_filter) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.' . a:extra_filter)
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+" Don't close window, when deleting a buffer
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+   let l:currentBufNum = bufnr("%")
+   let l:alternateBufNum = bufnr("#")
+
+   if buflisted(l:alternateBufNum)
+     buffer #
+   else
+     bnext
+   endif
+
+   if bufnr("%") == l:currentBufNum
+     new
+   endif
+
+   if buflisted(l:currentBufNum)
+     execute("bdelete! ".l:currentBufNum)
+   endif
+endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn persistent undo on 
+"    means that you can undo even when you close a buffer/VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
+au FileType javascript call JavaScriptFold()
+au FileType javascript setl fen
+au FileType javascript setl nocindent
+function! JavaScriptFold() 
+    setl foldmethod=syntax
+    setl foldlevelstart=1
+    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+    function! FoldText()
+        return substitute(getline(v:foldstart), '{.*', '{...}', '')
+    endfunction
+    setl foldtext=FoldText()
+endfunction
