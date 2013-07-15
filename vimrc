@@ -12,11 +12,14 @@ set nocompatible
 set backspace=indent,eol,start
 " Sets how many lines of history VIM has to remember
 set history=1000
+" Set how many lines below cursor on scroll
 set scrolloff=3 
 
 set viminfo=!,'100,\"100,:20,<50,s10,h,n~/.viminfo
 
+" Shows info about current command
 set showcmd
+" Shows mode
 set showmode
 
 " Highlight search results
@@ -41,9 +44,9 @@ set laststatus=2
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell    " turn off visual bell
 set vb
-set shiftround
+set shiftround      " Move Len(shiftwidth-1) on >> <<
 set nobackup        " do not keep a backup file
-set noswapfile
+set noswapfile      " don't use swap files
 set number          " show line numbers
 set numberwidth=4   " line numbering takes up 5 spaces
 set ignorecase      " ignore case when searching
@@ -56,7 +59,7 @@ set modelines=3     " number lines checked for modelines
 set shortmess=atI   " Abbreviate messages
 set nostartofline   " don't jump to first character when paging
 set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
-set undolevels=200
+set undolevels=200  " keep 200 undos
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)] 
 
@@ -128,12 +131,15 @@ vmap q' s''<C-R>"<Esc>
 vmap q" s""<C-R>"<Esc>
 vmap q` s``<C-R>"<Esc>
 
+" Enable syntax highlighting
 syntax on
 " Use spaces instead of tabs
 set expandtab
+" Show matching braces
 set sm
 " Be smart when using tabs ;)
 set smarttab
+" Set term to 256 Colors
 set t_Co=256
 if has("gui_running")
     " See ~/.gvimrc
@@ -144,6 +150,7 @@ if has("gui_running")
     set listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
     autocmd filetype html,xml set listchars-=tab:▷⋅.
     colorscheme jellybeans
+    set cursorline
 else
     set background=dark   " adapt colors for background
     let g:airline_powerline_fonts=1
@@ -153,10 +160,6 @@ else
     let g:solarized_contract="high"
     colorscheme solarized
     set guifont=Source\ Code\ Pro\ for\ Powerline:h14.00  " use this font
-endif
-
-if has("gui_running")
-    set cursorline
 endif
 
 if has("autocmd")
@@ -198,13 +201,9 @@ if has("autocmd")
     autocmd BufWritePost *.js JSLint
     autocmd BufEnter * :syntax sync fromstart
 
-
-    
     " Automatically chmod +x Shell scripts
     au BufWritePost   *.sh             !chmod +x %
-
     au BufNewFile,BufRead *.jinja2 set filetype=html
-    
 endif
 
 " Quickly edit/reload the vimrc file
