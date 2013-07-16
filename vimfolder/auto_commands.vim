@@ -25,4 +25,13 @@ if has("autocmd")
 
 " Resize Splits When The Window Is Resized:
   autocmd VimResized * exe "normal! \<c-w>="
+
+" Set different tab stops for html files
+  autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
+
+" Automatically chmod +x Shell scripts
+  au BufWritePost   *.sh             !chmod +x %
+
+" Set Filetype automatically to HTML if the extension is jinja2
+  au BufNewFile,BufRead *.jinja2 set filetype=html
 end

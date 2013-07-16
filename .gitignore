@@ -33,3 +33,7 @@ htmlcov
 log/
 db/
 venv/
+.netrwhist
+viminfo
+tags
+bundle

@@ -9,10 +9,6 @@ set ttyfast                               " Send more characters when redrawing 
 
 set keywordprg=:help                      " Set it to internal VIM Help
 
-if has("mac")
-  set macmeta                             " Enable Use Of The Mac Option Key
-end
-
 " Undo:
 if v:version >= 703
   set undofile
