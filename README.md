@@ -15,7 +15,7 @@ To use them:
 * ln -s ~/dotfiles/zshrc .zshrc
 * ln -s ~/dotfiles/zsh .zsh
 
-##Setup Oh-My-Zsh Submodule
+## Setup Oh-My-Zsh Submodule
 * cd dotfiles
 * git submodule init
 * git submodule update
@@ -23,20 +23,20 @@ To use them:
 
 You might also need the following first:
 
-##Homebrew
+## Homebrew
 * ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 * brew doctor
 * brew install git bash-completion python zsh
-##Setup ZSH
+## Setup ZSH
 * Add /usr/local/bin/zsh to /etc/shells
 * chsh -s /usr/local/bin/zsh
-##Setup CoVim
+## Setup CoVim
 * pip install twisted
-##Setup Command-T
+## Setup Command-T
 * cd ~/.vim/bundle/Command-T
 * ruby extconf.rb
 * make
-##Configure Git
+## Configure Git
 * git config --global color.ui auto
 * git config --global core.autocrlf input
 * git config --global user.name "Name"
