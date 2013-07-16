@@ -27,15 +27,19 @@ You might also need the following first:
 * ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 * brew doctor
 * brew install git bash-completion python zsh
+
 ## Setup ZSH
 * Add /usr/local/bin/zsh to /etc/shells
 * chsh -s /usr/local/bin/zsh
+
 ## Setup CoVim
 * pip install twisted
+
 ## Setup Command-T
 * cd ~/.vim/bundle/Command-T
 * ruby extconf.rb
 * make
+
 ## Configure Git
 * git config --global color.ui auto
 * git config --global core.autocrlf input
