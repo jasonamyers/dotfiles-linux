@@ -27,6 +27,9 @@ Bundle "git://github.com/gmarik/vundle"
  " Pairs of Mappings in Vim
   Bundle "git://github.com/tpope/vim-unimpaired.git"
 
+ " Adds status bar to Vim
+  Bundle "git@github.com:bling/vim-airline.git"
+
 " Working With Colors:
  " Show color previews and help pick the one you want
   Bundle "git://github.com/Rykka/colorv.vim.git"
