@@ -8,7 +8,6 @@
   let g:syntastic_enable_signs = 1
   let g:syntastic_auto_loc_list=0
   let g:syntastic_loc_list_height=3
-  let g:syntastic_python_checker = 'flake8'
   let g:syntastic_python_checker_args = "--max-complexity 13 --ignore=E501,E128"
   let g:syntastic_check_on_open=1
 
