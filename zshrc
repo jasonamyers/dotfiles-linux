@@ -18,7 +18,7 @@ autoload -U compinit
 compinit
 
 
-alias ls='ls -G'  
+alias ls='ls -G'
 alias ll='ls -hlatr --color'
 alias gg='history | grep'
 #alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
@@ -89,7 +89,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux)
+plugins=(git, fabric, osx, pip, redis-cli, sublime, tmux, virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/func/color_cmds
