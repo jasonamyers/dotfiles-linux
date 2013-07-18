@@ -75,10 +75,10 @@ set foldlevelstart=99                     " Don't autofold anything (but still a
 set foldlevel=100                         " Don't autofold anything (but still able to fold manually)
 
 " Mouse:
-set nomousefocus                          " Don't focus the window when the mouse pointer is moved.
-set mousehide                             " Hide mouse pointer on insert mode.
-set mouse=a                               " Enable the mouse in all modes
-set ttymouse=xterm2                       " Enable mouse handling in xterm2 terminals
+"set nomousefocus                          " Don't focus the window when the mouse pointer is moved.
+"set mousehide                             " Hide mouse pointer on insert mode.
+"set mouse=a                               " Enable the mouse in all modes
+"set ttymouse=xterm2                       " Enable mouse handling in xterm2 terminals
 
 " Wrapping:
 set whichwrap-=h,l                        " Do Not Wrap To Next Line With The H And L Keys
