@@ -38,13 +38,17 @@ Bundle "git://github.com/gmarik/vundle"
  " Vim plugin that displays tags in a window, ordered by class etc
   Bundle "git://github.com/majutsushi/tagbar.git"
 
-" File Manipulation:
+" File Navigation:
  " A tree explorer plugin for vim
   Bundle "git://github.com/scrooloose/nerdtree.git"
 
- " A FuzzyFinder for vim
-  Bundle "git@github.com:wincent/Command-T.git"
+  " Fuzzy file, buffer, mru and tag finder
+  Bundle "git://github.com/kien/ctrlp.vim.git"
 
+  " Vim plugin for the Perl module / CLI script 'ack'
+  Bundle "git://github.com/mileszs/ack.vim.git"
+
+" File Manipulation:
  " Graph your Vim undo tree in style.
   Bundle "git://github.com/sjl/gundo.vim.git"
 
