@@ -10,4 +10,4 @@
 
   let g:autotagCtagsCmd = 'ctags --extra=+f --fields=+iaS'
   let g:autotagVerbosityLevel = 0
-  let g:autotagMaxTagFileSize = 50" "" ""
+  let g:autotagMaxTagFileSize = 50
