@@ -34,4 +34,11 @@ if has("autocmd")
 
 " Set Filetype automatically to HTML if the extension is jinja2
   au BufNewFile,BufRead *.jinja2 set filetype=html
+
+" Turn on Rainbow Parenthesis by default
+  au VimEnter * RainbowParenthesesToggle
+  au Syntax * RainbowParenthesesLoadRound
+  au Syntax * RainbowParenthesesLoadSquare
+  au Syntax * RainbowParenthesesLoadBraces
+
 end
