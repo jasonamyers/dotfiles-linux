@@ -21,9 +21,6 @@ Bundle "git://github.com/gmarik/vundle"
  " Show marks in the gutter for various items (marks, quickfix, location, errors)
   Bundle "git://github.com/tomtom/quickfixsigns_vim.git"
 
- " Simple status bar
-  Bundle "git@github.com:wincent/Command-T.git"
-
  " Pairs of Mappings in Vim
   Bundle "git://github.com/tpope/vim-unimpaired.git"
 
@@ -150,9 +147,6 @@ Bundle "git://github.com/gmarik/vundle"
 
  " A Vim color scheme with dark and light variants
   Bundle "git://github.com/noahfrederick/Hemisu.git"
-
- " A Vim color scheme based on Solarized
-  Bundle "git@github.com:altercation/vim-colors-solarized.git"
 
  " Precision colorscheme for the vim text editor
   Bundle "git://github.com/altercation/vim-colors-solarized.git"
