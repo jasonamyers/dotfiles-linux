@@ -1,16 +1,6 @@
 " Map Leader
 let mapleader = ","
 
-" Disable Arrow Keys
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-nnoremap <Up> <NOP>
-nnoremap <Down> <NOP>
-nnoremap <Left> <NOP>
-nnoremap <Right> <NOP>
-
 " Move To The First Non Whitespace Character Then To The First Column:
 nmap <silent> 0 :call g:PersonalVim_ToggleHomeKey()<CR>
 
@@ -33,6 +23,12 @@ nnoremap <silent> // :silent :nohlsearch<CR>
 " Copy Current Path And Filename To Clipboard:
 nnoremap <silent> <leader>cp :let @* = expand("%:p")<CR>
 nnoremap <silent> <leader>CP :let @* = expand("%:p:h") . "/"<CR>
+
+" Open Syntastics Error List:
+nnoremap <silent> <leader>e :Errors<CR>
+
+" Close Syntastics Error List If Below:
+nnoremap <silent> <leader>E <C-W>j :bd<CR>
 
 " Move Around Via Methods:
 nmap <silent> } }zzzv
