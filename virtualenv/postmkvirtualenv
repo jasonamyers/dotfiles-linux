@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+# This hook is run after a new virtualenv is activated.
+proj_name=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
+mkdir $HOME/src/$proj_name
+add2virtualenv $HOME/src/$proj_name
+cd $HOME/src/$proj_name

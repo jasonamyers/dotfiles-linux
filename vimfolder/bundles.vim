@@ -97,11 +97,12 @@ Bundle "git://github.com/gmarik/vundle"
     Bundle "git://github.com/tpope/vim-markdown.git"
 
  " Javascript:
-  " JSHint fork of jslint.vim
-    Bundle "git://github.com/wookiehangover/jshint.vim.git"
-
   " Vastly improved vim's javascript indentation.
     Bundle "git://github.com/pangloss/vim-javascript.git"
+
+  " JSHint fork of jslint.vim
+    "Bundle "git://github.com/wookiehangover/jshint.vim.git"
+    Bundle "https://github.com/Shutnik/jshint2.vim"
 
   " CoffeeScript support for vim
     Bundle "git://github.com/kchmck/vim-coffee-script.git"
