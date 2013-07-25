@@ -6,18 +6,18 @@
   [[default]]
     use_system_font = False
     font = Source Code Pro Medium 14
-  [[jellybeans]]
-  palette = "#3b3b3b:#cf6a4c:#99ad6a:#d8ad4c:#597bc5:#1037b0:#71b9f8:#adadad"
-  background_color = "#151515"
-  cursor = "#b0d0f0"
-  font = Source Code Pro Medium 14
   [[solarized-dark]]
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
     cursor_color = "#eee8d5"
     foreground_color = "#eee8d5"
-    font = Source Code Pro Medium 12
+    font = Source Code Pro Medium 14
     background_color = "#002b36"
+  [[jellybeans]]
+    palette = "#3b3b3b:#cf6a4c:#99ad6a:#d8ad4c:#597bc5:#1037b0:#71b9f8:#adadad"
+    font = Source Code Pro Medium 14
+    background_color = "#151515"
+    use_system_font = False
   [[solarized-light]]
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_color = "#eee8d5"
