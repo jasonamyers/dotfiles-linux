@@ -12,8 +12,10 @@ export PGHOST=localhost
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias usb="sudo mount /dev/sdb1 /media/jasonamyers"
+alias odintun="ssh -f odin -L 8001:odin:8000 -N"
 alias tmux="TERM=screen-256color-bce tmux"
-alias ls='ls -G'  
+alias ls='ls -G'
 alias ll='ls -hlatr --color'
 alias gg='history | grep'
 #alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
@@ -22,7 +24,7 @@ alias cleanpyc='find . -type f -name "*.pyc" -delete'
 alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias ppsql='sudo -u postgres psql'
-alias vga='xrandr --output VGA1 --auto --above LVDS1 && xrandr --output LVDS1 --auto'
+alias vga='xrandr --output HDMI1 --auto --above LVDS1 && xrandr --output LVDS1 --auto'
 
 alias pmr='python manage.py runserver'
 alias pmshell='python manage.py shell'
@@ -54,16 +56,6 @@ export HISTFILESIZE=100000
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:[ ]*:ls:ll:la:l:cd:pwd:exit:mc:su:df:clear"
 
-export WORKON_HOME=$HOME/.virtualenv
-export VIRTUALENVWRAPPER_PYTHON=`which python`
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-export PROJECT_HOME=$HOME/src
-if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -98,3 +90,18 @@ plugins=(git, fabric, pip, redis-cli, sublime, tmux)
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+pythonbrew switch 2.7.5
+export WORKON_HOME=$HOME/.virtualenv
+export VIRTUALENVWRAPPER_PYTHON=`which python`
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+export PROJECT_HOME=$HOME/src
+if [[ -r $PATH_PYTHONBREW_CURRENT/virtualenvwrapper.sh ]]; then
+    source $PATH_PYTHONBREW_CURRENT//virtualenvwrapper.sh
+else
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin

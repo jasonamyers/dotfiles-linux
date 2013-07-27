@@ -37,3 +37,6 @@ venv/
 viminfo
 tags
 bundle
+
+virtualenv/health/
+virtualenv/redshift_sqlalchemy/
