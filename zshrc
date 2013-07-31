@@ -105,3 +105,4 @@ fi
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/go/bin
+alias tray="stalonetray --icon-gravity E --geometry 5x1-0+0  --max-geometry 5x1-0+0 --background '#000000' --skip-taskbar --icon-size 24 --kludges force_icons_size --window-strut none &"
