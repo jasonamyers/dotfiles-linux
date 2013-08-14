@@ -113,6 +113,10 @@ Bundle "git://github.com/gmarik/vundle"
   " JSON Highlighting for Vim
     Bundle "git://github.com/leshill/vim-json.git"
 
+ " Python:
+ " jedi auto complete
+   Bundle "git://github.com/davidhalter/jedi-vim.git"
+
  " HTML And XML:
   " zen-coding for vim
     Bundle "git://github.com/mattn/zencoding-vim.git"

@@ -24,7 +24,7 @@ alias cleanpyc='find . -type f -name "*.pyc" -delete'
 alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias ppsql='sudo -u postgres psql'
-alias vga='xrandr --output HDMI1 --auto --above LVDS1 && xrandr --output LVDS1 --auto'
+alias vga='xrandr --output HDMI1 --auto --above eDP1 && xrandr --output eDP1 --auto'
 
 alias pmr='python manage.py runserver'
 alias pmshell='python manage.py shell'
@@ -92,6 +92,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 pythonbrew switch 2.7.5
+source ~/.nvm/nvm.sh
+nvm use 0.8.6
 export WORKON_HOME=$HOME/.virtualenv
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
