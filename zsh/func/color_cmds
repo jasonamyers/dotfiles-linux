@@ -6,8 +6,8 @@ tab-color() {
 tab-reset() {
     echo -ne "\033]6;1;bg;*;default\a"
 }
- 
- 
+
+
 # Change the color of the tab when using SSH
 # reset the color after the connection closes
 color-ssh() {
@@ -16,7 +16,7 @@ color-ssh() {
         if [[ "$*" =~ "production|ec2-.*compute-1|saltmaster" ]]; then
             tab-color 211 54 130
         else
-            tab-color 
+            tab-color
         fi
     fi
     ssh $*
@@ -31,12 +31,12 @@ color-psql() {
     psql $*
 }
 compdef _psql color-psql=psql
- 
+
 color-pmr() {
     if [[ -n "$ITERM_SESSION_ID" ]]; then
         trap "tab-reset" INT EXIT
         tab-color 181 137 0
     fi
-    python manage.py runserver 
+    python manage.py runserver
 }
 compdef _pmr color-pmr=pmr

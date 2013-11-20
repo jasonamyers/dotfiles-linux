@@ -35,7 +35,6 @@ keycode 135 = Super_R NoSymbol Super_R
 
 clear Shift
 clear Lock
-remove Lock
 clear Control
 clear Mod1
 clear Mod2
