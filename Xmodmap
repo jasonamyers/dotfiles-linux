@@ -1,0 +1,53 @@
+! --- Reverse Scrolling
+pointer = 1 2 3 5 4 6 7 8 9 10 11 12 13 14 15
+! --- Natural Scrolling
+!pointer = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+! --- Swap Alt and Cmd keys
+! Remaps the keys (reading left-to-right):
+!    -FROM-
+!  Fn Control_L Alt_L Super_L Space Super_R Alt_R
+!    -TO-
+!  Fn Control_L Super_L Alt_L Space Alt_R Menu
+!
+! To change defaults, just re-order the rows of the "SWAP" section and
+! re-write the numbers so they match the "DEFAULT" section.
+
+!! DEFAULT: fn ctrl_l alt_l super_l super_r alt_r
+!keycode  37 = Control_L NoSymbol Control_L
+!keycode  64 = Alt_L Meta_L Alt_L Meta_L
+!keycode 133 = Super_L NoSymbol Super_L
+!keycode 134 = Super_R NoSymbol Super_R
+!keycode 108 = Alt_R Meta_R Alt_R Meta_R
+!!begin vestigial keys:
+!keycode 135 = Menu NoSymbol Menu
+!keycode 105 = Control_R NoSymbol Control_R
+
+!! SWAP: fn ctrl_l super_l alt_l alt_r menu
+!keycode  37 = Control_L NoSymbol Control_L
+keycode  64 = Super_L NoSymbol Super_L
+keycode 133 = Alt_L Meta_L Alt_L Meta_L
+keycode 134 = Alt_R Meta_R Alt_R Meta_R
+keycode 108 = Menu NoSymbol Menu
+!!begin vestigial keys:
+keycode 135 = Super_R NoSymbol Super_R
+!keycode 105 = Control_R NoSymbol Control_R
+
+clear Shift
+clear Lock
+remove Lock
+clear Control
+clear Mod1
+clear Mod2
+clear Mod3
+clear Mod4
+clear Mod5
+
+add Shift   = Shift_L Shift_R
+keysym Caps_Lock = Control_L
+add Control = Control_L Control_R
+add Mod1    = Alt_L Alt_R Meta_L
+add Mod2    = Num_Lock
+!add Mod3   =
+add Mod4    = Super_L Super_R Super_L Hyper_L
+add Mod5    = ISO_Level3_Shift Mode_switch

@@ -90,8 +90,11 @@ plugins=(git, fabric, pip, redis-cli, sublime, tmux)
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
-pythonbrew switch 2.7.5
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PYVER_ROOT=`pyenv prefix`
+export PYVER_BIN="$PYVER_ROOT/bin"
 source ~/.nvm/nvm.sh
 nvm use 0.8.6
 export WORKON_HOME=$HOME/.virtualenv
@@ -99,8 +102,8 @@ export VIRTUALENVWRAPPER_PYTHON=`which python`
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 export PROJECT_HOME=$HOME/src
-if [[ -r $PATH_PYTHONBREW_CURRENT/virtualenvwrapper.sh ]]; then
-    source $PATH_PYTHONBREW_CURRENT//virtualenvwrapper.sh
+if [[ -r $PYVER_BIN/virtualenvwrapper.sh ]]; then
+    source $PYVER_BIN/virtualenvwrapper.sh
 else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
