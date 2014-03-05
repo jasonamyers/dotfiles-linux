@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="kolo"
+ZSH_THEME="simple"
 export DEFAULT_USER="jasonamyers"
 export PGHOST=localhost
 
@@ -25,6 +25,11 @@ alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/se
 alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias ppsql='sudo -u postgres psql'
 alias vga='xrandr --output HDMI1 --auto --above eDP1 && xrandr --output eDP1 --auto'
+alias cleanup='git branch --merged | grep -v master | grep -v "*" | cut -c3- | xargs -I {} git branch -d {}'
+alias glist='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
+alias startred='redis-server /usr/local/etc/redis.conf &'
+alias work='workon health;cd health'
+alias startwork='startpost; startred;workon health;cd health'
 
 alias pmr='python manage.py runserver'
 alias pmshell='python manage.py shell'
