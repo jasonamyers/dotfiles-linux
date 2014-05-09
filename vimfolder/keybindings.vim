@@ -36,10 +36,10 @@ nmap <silent> } }zzzv
 nmap <silent> { {zzzv
 
 " Mimic Unimpaired Style For Navigating Tabs:
-noremap <silent>[r :tabprevious<CR>
-noremap <silent>]r :tabnext<CR>
-noremap <silent>[R <C-O>:tabfirst<CR>
-noremap <silent>]R <C-O>:tablast<CR>
+noremap <silent>[r :bp<CR>
+noremap <silent>]r :bn<CR>
+noremap <silent>[R <C-O>:bfirst<CR>
+noremap <silent>]R <C-O>:blast<CR>
 
 " Mimic Unimpaired Style For Navigating Cursor History:
 nnoremap <silent>[i <C-O>
@@ -53,16 +53,14 @@ nnoremap <silent> gr :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " Create Window Splits Easier:
-nnoremap <silent> tt :tabnew<CR>
-nnoremap <silent> td mA:tabe<space>%<CR>gT`Agt`A
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " Disable Arrow Keys For Criminies:
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
+"inoremap <Up> <NOP>
+"inoremap <Down> <NOP>
+"inoremap <Left> <NOP>
+"inoremap <Right> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -74,3 +72,7 @@ nnoremap <silent> <leader>r :call g:PersonalVim_Refresh()<CR>
 " Google For The Word Under The Curson:
 nnoremap gl :set operatorfunc=g:PersonalVim_GoogleOperator<CR>g@
 vnoremap gl :<C-u>call g:PersonalVim_GoogleOperator(visualmode())<CR>
+
+" This rewires n and N to do the highlighing:
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>

@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="simple"
+export ZSH_THEME="simple"
 export DEFAULT_USER="jasonamyers"
 export PGHOST=localhost
 
@@ -24,7 +24,6 @@ alias cleanpyc='find . -type f -name "*.pyc" -delete'
 alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias ppsql='sudo -u postgres psql'
-alias vga='xrandr --output HDMI1 --auto --above eDP1 && xrandr --output eDP1 --auto'
 alias cleanup='git branch --merged | grep -v master | grep -v "*" | cut -c3- | xargs -I {} git branch -d {}'
 alias glist='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
 alias startred='redis-server /usr/local/etc/redis.conf &'
@@ -48,6 +47,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -d'
+alias tmux="TERM=screen-256color-bce tmux"
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 # If not running interactively, don't do anything
@@ -102,7 +102,7 @@ eval "$(pyenv init -)"
 export PYVER_ROOT=`pyenv prefix`
 export PYVER_BIN="$PYVER_ROOT/bin"
 source ~/.nvm/nvm.sh
-nvm use 0.8.6
+nvm use 0.10
 export WORKON_HOME=$HOME/.virtualenv
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
@@ -116,4 +116,3 @@ fi
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/go/bin
-alias tray="stalonetray --icon-gravity W --geometry 5x1+0-0  --max-geometry 5x1+0-0 --background '#000000' --skip-taskbar --icon-size 24 --kludges force_icons_size --window-strut none &"

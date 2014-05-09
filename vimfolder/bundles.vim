@@ -91,31 +91,28 @@ Bundle "git://github.com/gmarik/vundle"
   " Comment Toggling
     Bundle "git@github.com:scrooloose/nerdcommenter.git"
 
- " Team:
-  " Colaborative editing
-    Bundle "git://github.com/FredKSchott/CoVim.git"
+ " Python:
+  " Auto completion etc
+    "Bundle "git@github.com:davidhalter/jedi-vim.git"
+  " PyTest Support
+    Bundle "git://github.com/alfredodeza/pytest.vim.git"
 
  " Markdown:
   " Vim Markdown runtime files
     Bundle "git://github.com/tpope/vim-markdown.git"
 
  " Javascript:
+  " JSHint fork of jslint.vim
+    Bundle "https://github.com/Shutnik/jshint2.vim"
+
   " Vastly improved vim's javascript indentation.
     Bundle "git://github.com/pangloss/vim-javascript.git"
-
-  " JSHint fork of jslint.vim
-    "Bundle "git://github.com/wookiehangover/jshint.vim.git"
-    Bundle "https://github.com/Shutnik/jshint2.vim"
 
   " CoffeeScript support for vim
     Bundle "git://github.com/kchmck/vim-coffee-script.git"
 
   " JSON Highlighting for Vim
     Bundle "git://github.com/leshill/vim-json.git"
-
- " Python:
- " jedi auto complete
-   Bundle "git://github.com/davidhalter/jedi-vim.git"
 
  " HTML And XML:
   " zen-coding for vim
@@ -162,6 +159,9 @@ Bundle "git://github.com/gmarik/vundle"
 
  " Precision colorscheme for the vim text editor
   Bundle "git://github.com/altercation/vim-colors-solarized.git"
+
+ " Base16 Color Scheme
+  Bundle 'chriskempson/base16-vim'
 
  " More colorschemes
   Bundle "git://github.com/daylerees/colour-schemes", { "rtp": "vim-themes/" }
