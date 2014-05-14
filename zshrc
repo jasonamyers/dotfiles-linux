@@ -117,3 +117,6 @@ fi
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/go/bin
+# vvvv ---- Added by Pip Bootstrap ---- vvvv #
+source "${HOME}/.pip_bootstrap_profile.sh";
+# ^^^^ ---- Added by Pip Bootstrap ---- ^^^^ #
