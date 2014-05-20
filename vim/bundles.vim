@@ -32,8 +32,6 @@ Bundle "git://github.com/gmarik/vundle"
   Bundle "git://github.com/Rykka/colorv.vim.git"
 
 " Tagging:
- " Updates entries in a tags file automatically when saving
-  Bundle "git://github.com/jfelchner/AutoTag.git"
 
  " Vim plugin that displays tags in a window, ordered by class etc
   Bundle "git://github.com/majutsushi/tagbar.git"
@@ -76,9 +74,6 @@ Bundle "git://github.com/gmarik/vundle"
 
  " a Git wrapper so awesome, it should be illegal
   Bundle "git://github.com/tpope/vim-fugitive.git"
-
- " gitk for Vim
-  Bundle "git://github.com/jfelchner/gitv.git"
 
 " Programming:
  " General:
@@ -142,10 +137,6 @@ Bundle "git://github.com/gmarik/vundle"
  " Tmux:
   " Syntax highlighting for tmux configuration files
     Bundle "git://github.com/acustodioo/vim-tmux.git"
-
- " Puppet:
-  " Editor support for Puppet files
-    Bundle "git://github.com/jfelchner/vim-puppet.git"
 
 " Themes And Appearance:
  " Colorsheme Scroller, Chooser, and Browser
