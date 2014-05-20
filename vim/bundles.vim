@@ -115,8 +115,8 @@ Bundle "git://github.com/gmarik/vundle"
     Bundle "git://github.com/leshill/vim-json.git"
 
  " HTML And XML:
-  " zen-coding for vim
-    Bundle "git://github.com/mattn/zencoding-vim.git"
+  " zen-coding (emmet) for vim
+    Bundle "git@github.com:mattn/emmet-vim.git"
 
   " MatchParen for HTML tags
     Bundle "git://github.com/gregsexton/MatchTag.git"
