@@ -19,10 +19,6 @@ git clone "git://github.com/tpope/vim-unimpaired.git"
 # Adds status bar to Vim
 git clone "git@github.com:bling/vim-airline.git"
 
-# Working With Colors:
-# Show color previews and help pick the one you want
-git clone "git://github.com/Rykka/colorv.vim.git"
-
 # Tagging:
 
 # Vim plugin that displays tags in a window, ordered by class etc
@@ -79,9 +75,6 @@ git clone "git://github.com/kien/rainbow_parentheses.vim.git"
 git clone "git@github.com:scrooloose/nerdcommenter.git"
 
 # Python:
-# Auto completion etc
-
-git clone "git@github.com:davidhalter/jedi-vim.git"
 # PyTest Support
 git clone "git://github.com/alfredodeza/pytest.vim.git"
 

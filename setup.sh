@@ -22,5 +22,6 @@ for file in [a-zA-Z]* ; do
 done
 
 # Init vim bundles
-echo ">> Install vim bundles using Vundle"
-vim +BundleInstall +qall
+echo ">> Install vim bundles"
+cd ~/.vim/bundle/
+./bundles.sh
