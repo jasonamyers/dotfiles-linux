@@ -22,8 +22,8 @@ alias gg='history | grep'
 #alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim'
 alias breakitdown="history | awk '{a[$2]++ } END{for(i in a){print a[i] ' ' i}}'|sort -rn |head -n 20"
 alias cleanpyc='find . -type f -name "*.pyc" -delete'
-alias startpost='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stoppost='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias startpost='sudo systemctl restart postgresql-9.3'
+alias stoppost='sudo systemctl stop postgresql-9.3'
 alias ppsql='sudo -u postgres psql'
 alias cleanup='git branch --merged | grep -v master | grep -v "*" | cut -c3- | xargs -I {} git branch -d {}'
 alias glist='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
