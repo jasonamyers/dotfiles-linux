@@ -118,5 +118,13 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/go/bin
 # vvvv ---- Added by Pip Bootstrap ---- vvvv #
-source "${HOME}/.pip_bootstrap_profile.sh";
+#source "${HOME}/.pip_bootstrap_profile.sh";
+# Configure pip to always do the thing it should do out of the box, and not
+# re-download packages every time I sneeze.
+export STANDARD_CACHE_DIR="${XDG_CACHE_HOME:-${HOME}/.cache}/pip";
+export WHEELHOUSE="${STANDARD_CACHE_DIR}/Wheelhouse";
+export PIP_USE_WHEEL="yes";
+export PIP_DOWNLOAD_CACHE="${STANDARD_CACHE_DIR}/Downloads";
+export PIP_FIND_LINKS="file://${WHEELHOUSE}";
+export PIP_WHEEL_DIR="${WHEELHOUSE}";
 # ^^^^ ---- Added by Pip Bootstrap ---- ^^^^ #
