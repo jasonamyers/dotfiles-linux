@@ -14,12 +14,14 @@
 
     ;; Color themes
     color-theme
+    rainbow-delimiters
 
     ;; Python
     elpy
     pungi
     nose
     nose-mode
+    web-mode
 
     ;; PHP
     php-mode

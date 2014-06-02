@@ -24,10 +24,11 @@
 (load-if-exists "~/.emacs.d/init/global-modes.el")
 (load-if-exists "~/.emacs.d/init/bindings.el")
 (load-if-exists "~/.emacs.d/init/appearance.el")
+(load-if-exists "~/.emacs.d/init/rainbow-delimiters.el")
 
 ;;; Language specific
 (load-if-exists "~/.emacs.d/init/python.el")
-
+(load-if-exists "~/.emacs.d/init/web-mode.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                   Config                                   ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

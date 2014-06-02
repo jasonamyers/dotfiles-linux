@@ -11,7 +11,7 @@
 (elpy-use-ipython)
 ; make sure that the mode line isn't 20 miles long
 (elpy-clean-modeline)
-(highlight-indentation)
+
 
 ;;; Enable Abbreviations
 (add-hook 'python-mode-hook
