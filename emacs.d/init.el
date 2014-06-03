@@ -25,6 +25,7 @@
 (load-if-exists "~/.emacs.d/init/bindings.el")
 (load-if-exists "~/.emacs.d/init/appearance.el")
 (load-if-exists "~/.emacs.d/init/rainbow-delimiters.el")
+(load-if-exists "~/.emacs.d/init/org-mode.el")
 
 ;;; Language specific
 (load-if-exists "~/.emacs.d/init/python.el")
