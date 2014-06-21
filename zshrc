@@ -9,6 +9,8 @@ ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="agnoster"
 export DEFAULT_USER="jasonamyers"
 export PGHOST=localhost
+#default to using rednose for nosetests
+export NOSE_REDNOSE=1
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -96,7 +98,8 @@ plugins=(git, fabric, pip, redis-cli, sublime, tmux)
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/func/soma_fm
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/pgsql-9.3/bin/:/usr/local/heroku/bin
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/pgsql-9.3/bin/:/usr/local/heroku/bin:~/perl5/bin:/usr/lib/postgresql/9.3/bin/
+export PERL5LIB=$PERL5LIB:~/perl5/lib/perl5
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -128,3 +131,13 @@ export PIP_DOWNLOAD_CACHE="${STANDARD_CACHE_DIR}/Downloads";
 export PIP_FIND_LINKS="file://${WHEELHOUSE}";
 export PIP_WHEEL_DIR="${WHEELHOUSE}";
 # ^^^^ ---- Added by Pip Bootstrap ---- ^^^^ #
+
+PERL_MB_OPT="--install_base \"/home/jasonamyers/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jasonamyers/perl5"; export PERL_MM_OPT;
+#### EMMA THINGS ####
+export LOCALEMMA_EMMA_BASE_DIR=~/dev/emma/
+export LOCALEMMA_EMMADMIN_BASE_DIR=~/dev/emmadmin/
+export LOCALEMMA_AUDIENCE_BASE_DIR=~/dev/audience/../
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

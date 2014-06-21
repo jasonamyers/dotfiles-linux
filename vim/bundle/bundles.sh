@@ -4,6 +4,9 @@ git clone "git://github.com/clones/vim-l9.git"
 # Ultimate auto-completion system for Vim
 git clone "git://github.com/ervandew/supertab.git"
 
+# You complete me more auto-completion
+git clone "git@github.com:Valloric/YouCompleteMe.git"
+
 # Toggle showing/hiding both the quickfix list and the location list
 git clone "git://github.com/milkypostman/vim-togglelist.git"
 
