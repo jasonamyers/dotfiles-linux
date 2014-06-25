@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/jasonamyers/dev/health/health/templates/reports/partials'
 let g:netrw_dirhist_2='/Users/jasonamyers/dev/health/.git'
 let g:netrw_dirhist_3='/Users/jasonamyers/dev/GlucoseTrack'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/home/jasonamyers/dev/health/health/static/js/phoenix'
 let g:netrw_dirhist_5='/home/jasonamyers/dotfiles-linux'
 let g:netrw_dirhist_6='/home/jasonamyers/dev/audience/tests/platform_tests/fbl_fixtures'
 let g:netrw_dirhist_7='/home/jasonamyers/dev/audience/tests/platform_tests/fbl_test_harness'
+let g:netrw_dirhist_8='/home/jmyers/dotfiles-linux'
+let g:netrw_dirhist_9='/home/jmyers/dotfiles-linux/virtualenv'
