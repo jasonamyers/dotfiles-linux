@@ -4,4 +4,4 @@ proj_name=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
 mkdir $HOME/dev/$proj_name
 add2virtualenv $HOME/dev/$proj_name
 cd $HOME/dev/$proj_name
-pip install rednose elpy jedi
+pip install rednose

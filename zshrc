@@ -105,6 +105,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PYVER_ROOT=`pyenv prefix`
 export PYVER_BIN="$PYVER_ROOT/bin"
+export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 nvm use 0.10
 export WORKON_HOME=$HOME/.virtualenv

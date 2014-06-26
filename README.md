@@ -9,11 +9,6 @@ To use them:
 * rename your current .bash_profile .bashrc .vim .vimrc
 * run setup.sh
 
-## Setup Oh-My-Zsh Submodule
-* cd dotfiles
-* git submodule init
-* git submodule update
-
 # Setup Xmonad
 * git clone git@github.com:davidbrewer/xmonad-ubuntu-conf.git ~/.xmonad
 * ~/.xmonad/install-xmonad
