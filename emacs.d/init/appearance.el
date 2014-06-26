@@ -15,9 +15,9 @@
     (scroll-bar-mode 0) ; remove scrollbar
     (tool-bar-mode 0) ; no tool bar
 )
-
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-comidia)))
+(load-theme 'leuven t)
+;(require 'color-theme)
+;(eval-after-load "color-theme"
+;  '(progn
+;     (color-theme-initialize)
+;     (color-theme-comidia)))

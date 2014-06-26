@@ -13,3 +13,7 @@ To use them:
 * cd dotfiles
 * git submodule init
 * git submodule update
+
+# Setup Xmonad
+* git clone git@github.com:davidbrewer/xmonad-ubuntu-conf.git ~/.xmonad
+* ~/.xmonad/install-xmonad
