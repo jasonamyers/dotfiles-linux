@@ -6,8 +6,8 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #export ZSH_THEME="simple"
-export ZSH_THEME="kphoen"
-export DEFAULT_USER="jasonamyers"
+export ZSH_THEME="agnoster"
+export DEFAULT_USER="jmyers"
 export PGHOST=localhost
 #default to using rednose for nosetests
 export NOSE_REDNOSE=1
@@ -15,7 +15,7 @@ export NOSE_REDNOSE=1
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias usb="sudo mount /dev/sdb1 /media/jasonamyers"
+alias usb="sudo mount /dev/sdb1 /media/jmyers"
 alias odintun="ssh -f odin -L 8001:odin:8000 -N"
 alias tmux="TERM=screen-256color-bce tmux"
 alias ls='ls -G'
@@ -133,8 +133,8 @@ export PIP_FIND_LINKS="file://${WHEELHOUSE}";
 export PIP_WHEEL_DIR="${WHEELHOUSE}";
 # ^^^^ ---- Added by Pip Bootstrap ---- ^^^^ #
 
-PERL_MB_OPT="--install_base \"/home/jasonamyers/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/jasonamyers/perl5"; export PERL_MM_OPT;
+PERL_MB_OPT="--install_base \"/home/jmyers/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jmyers/perl5"; export PERL_MM_OPT;
 #### EMMA THINGS ####
 export LOCALEMMA_EMMA_BASE_DIR=~/dev/emma/
 export LOCALEMMA_EMMADMIN_BASE_DIR=~/dev/emmadmin/
@@ -142,3 +142,10 @@ export LOCALEMMA_AUDIENCE_BASE_DIR=~/dev/audience/../
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Emacs
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+alias vim='emacsclient -t'
+alias vi='emacsclient -t'
+emacs --daemon
