@@ -12,3 +12,7 @@ To use them:
 # Setup Xmonad
 * git clone git@github.com:davidbrewer/xmonad-ubuntu-conf.git ~/.xmonad
 * ~/.xmonad/install-xmonad
+
+# Setup Emacs
+This is mostly handled by the setup.sh script; however, you need to start emacs and run:
+* M-x jedi:install-server
