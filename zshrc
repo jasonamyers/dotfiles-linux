@@ -5,8 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#export ZSH_THEME="simple"
-export ZSH_THEME="agnoster"
+export ZSH_THEME="simple"
+#export ZSH_THEME="agnoster"
 export DEFAULT_USER="jmyers"
 export PGHOST=localhost
 #default to using rednose for nosetests
@@ -110,9 +110,7 @@ source ~/.nvm/nvm.sh
 nvm use 0.10
 export WORKON_HOME=$HOME/.virtualenv
 export VIRTUALENVWRAPPER_PYTHON=`which python`
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-export PROJECT_HOME=$HOME/src
+export PROJECT_HOME=$HOME/dev
 if [[ -r $PYVER_BIN/virtualenvwrapper.sh ]]; then
     source $PYVER_BIN/virtualenvwrapper.sh
 else
@@ -148,5 +146,7 @@ alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias vim='emacsclient -t'
 alias vi='emacsclient -t'
-alias kille='emacsclient -e \'(kill-emacs)\''
+alias kille="emacsclient -e '(kill-emacs)'"
 emacs --daemon
+
+export TERM="xterm-256color"

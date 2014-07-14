@@ -1,7 +1,5 @@
 #!/usr/bin/zsh
 # This hook is run after a new virtualenv is activated.
-proj_name=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
-mkdir $HOME/dev/$proj_name
-add2virtualenv $HOME/dev/$proj_name
-cd $HOME/dev/$proj_name
-pip install rednose
+pip install wheel
+pip wheel rednose ipython[all]
+pip install rednose ipython[all]
