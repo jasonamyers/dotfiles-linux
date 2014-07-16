@@ -1,3 +1,3 @@
 "*****************************************
 " SuperTab
-let g:SuperTabDefaultCompletionType = "<C-Tab>"
+let g:SuperTabDefaultCompletionType = "context"

@@ -78,6 +78,9 @@ git clone "git@github.com:scrooloose/nerdcommenter.git"
 # PyTest Support
 git clone "git://github.com/alfredodeza/pytest.vim.git"
 
+# JEDI support
+git clone "git@github.com:davidhalter/jedi-vim.git"
+
 # Markdown:
 # Vim Markdown runtime files
 git clone "git://github.com/tpope/vim-markdown.git"

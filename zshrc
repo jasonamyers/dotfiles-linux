@@ -142,11 +142,11 @@ export LOCALEMMA_AUDIENCE_BASE_DIR=~/dev/audience/../
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Emacs
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
-alias vim='emacsclient -t'
-alias vi='emacsclient -t'
-alias kille="emacsclient -e '(kill-emacs)'"
-emacs --daemon
+#alias e='emacsclient -t'
+#alias ec='emacsclient -c'
+#alias vim='emacsclient -t'
+#alias vi='emacsclient -t'
+#alias kille="emacsclient -e '(kill-emacs)'"
+#emacs --daemon
 
 export TERM="xterm-256color"
