@@ -32,6 +32,8 @@ alias glist='for ref in $(git for-each-ref --sort=-committerdate --format="%(ref
 alias startred='redis-server /usr/local/etc/redis.conf &'
 alias work='workon health;cd health'
 alias startwork='startpost; startred;workon health;cd health'
+alias vpn='sudo vpnc '
+alias vpnd='sudo vpnc-disconnect '
 
 alias pmr='python manage.py runserver'
 alias pmshell='python manage.py shell'
