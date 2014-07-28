@@ -133,8 +133,19 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock screen
 bindsym Mod4+l exec i3lock
-# shutdown
-bindsym $mod+Shift+x exec gksudo halt
+
+mode  "(s)leep (h)ybernate (p)owersave (r)estart shut(d)own" {
+
+        bindsym s exec sudo pm-suspend; mode "default"
+        bindsym h exec sudo pm-hibernate; mode "default"
+        bindsym p exec sudo pm-powersave; mode "default"
+        bindsym d exec sudo 'shutdown -h now'; mode "default"
+        bindsym r exec sudo 'shutdown -r now'; mode "default"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+x mode "(s)leep (h)ybernate (p)owersave (r)estart shut(d)own"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
