@@ -99,6 +99,7 @@ plugins=(git, fabric, pip, redis-cli, sublime, tmux)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/func/soma_fm
+source ~/.zsh/func/pipp
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/pgsql-9.3/bin/:/usr/local/heroku/bin:~/perl5/bin:/usr/lib/postgresql/9.3/bin/
 export PERL5LIB=$PERL5LIB:~/perl5/lib/perl5
