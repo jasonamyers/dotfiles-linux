@@ -6,8 +6,12 @@ pip_bootstrap_runtime () {
 
     if [[ -z "${PYTHON_USER_BIN}" ]]; then
         # Set up environment.
-        export PYTHON_USER_BIN="$(${BOOTSTRAP_PYTHON} -m site --user-base)/bin";
-        export PYTHON_USER_LIB="$(${BOOTSTRAP_PYTHON} -m site --user-site)";
+
+        # Note that you can’t just "import site", because distribute installs a
+        # site.py without the __main__ block.
+
+        export PYTHON_USER_BIN="$(${BOOTSTRAP_PYTHON} -c 'import site; site._script()' --user-base)/bin";
+        export PYTHON_USER_LIB="$(${BOOTSTRAP_PYTHON} -c 'import site; site._script()' --user-site)";
 
         export PATH="${PYTHON_USER_BIN}:${PATH}";
 

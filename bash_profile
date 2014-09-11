@@ -13,7 +13,4 @@ unset file
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-# vvvv ---- Added by Pip Bootstrap ---- vvvv #
-source "${HOME}/.pip_bootstrap_profile.sh";
-# ^^^^ ---- Added by Pip Bootstrap ---- ^^^^ #
-
+[ -s "/home/jmyers/.nvm/nvm.sh" ] && . "/home/jmyers/.nvm/nvm.sh" # This loads nvm
