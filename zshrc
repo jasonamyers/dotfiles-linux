@@ -103,22 +103,22 @@ source ~/.zsh/func/pipp
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/pgsql-9.3/bin/:/usr/local/heroku/bin:~/perl5/bin:/usr/lib/postgresql/9.3/bin/
 export PERL5LIB=$PERL5LIB:~/perl5/lib/perl5
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
-#export PYVER_ROOT=`pyenv prefix`
-#export PYVER_BIN="$PYVER_ROOT/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PYVER_ROOT=`pyenv prefix`
+export PYVER_BIN="$PYVER_ROOT/bin"
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 nvm use 0.10
 export WORKON_HOME=$HOME/.virtualenv
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export PROJECT_HOME=$HOME/dev
-#if [[ -r $PYVER_BIN/virtualenvwrapper.sh ]]; then
-    #source $PYVER_BIN/virtualenvwrapper.sh
-#else
-    #echo "WARNING: Can't find virtualenvwrapper.sh"
-#fi
+if [[ -r $PYVER_BIN/virtualenvwrapper.sh ]]; then
+    source $PYVER_BIN/virtualenvwrapper.sh
+else
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/go/bin
@@ -132,16 +132,13 @@ export LOCALEMMA_AUDIENCE_BASE_DIR=~/dev/audience/../
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### Emacs
-#alias e='emacsclient -t'
-#alias ec='emacsclient -c'
-#alias vim='emacsclient -t'
-#alias vi='emacsclient -t'
-#alias kille="emacsclient -e '(kill-emacs)'"
-#emacs --daemon
-
 export TERM="xterm-256color"
 #
 # vvvv ---- Added by Pip Bootstrap ---- vvvv #
-source "${HOME}/.pip_bootstrap_profile.sh";
+export STANDARD_CACHE_DIR="${HOME}/Library/Caches/org.pip-installer.pip";
+export WHEELHOUSE="${STANDARD_CACHE_DIR}/Wheelhouse";
+export PIP_USE_WHEEL="yes";
+export PIP_DOWNLOAD_CACHE="${STANDARD_CACHE_DIR}/Downloads";
+export PIP_FIND_LINKS="file://${WHEELHOUSE}";
+export PIP_WHEEL_DIR="${WHEELHOUSE}";
 # ^^^^ ---- Added by Pip Bootstrap ---- ^^^^ #

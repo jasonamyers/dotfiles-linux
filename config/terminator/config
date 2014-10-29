@@ -2,6 +2,10 @@
   title_transmit_bg_color = "#d30102"
   focus = system
 [keybindings]
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
 [profiles]
   [[default]]
     use_system_font = False
