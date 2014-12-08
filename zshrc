@@ -17,7 +17,7 @@ export NOSE_REDNOSE=1
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias usb="sudo mount /dev/sdb1 /media/jmyers"
 alias odintun="ssh -f odin -L 8001:odin:8000 -N"
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color-bce tmux new -s jam"
 alias ls='ls -G'
 alias ll='ls -hlatr --color'
 alias gg='history | grep'
@@ -34,7 +34,7 @@ alias work='workon health;cd health'
 alias startwork='startpost; startred;workon health;cd health'
 alias vpn='sudo vpnc '
 alias vpnd='sudo vpnc-disconnect '
-
+alias dynamo='java -Djava.library.path=~/dynamodb/DynamoDBLocal_lib -jar ~/dynamodb/DynamoDBLocal.jar'
 alias pmr='python manage.py runserver'
 alias pmshell='python manage.py shell'
 alias pmdb='python manage.py dbshell'

@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/jmyers/dev/demmarc'
 let g:netrw_dirhist_2='/home/jmyers/dev/pynash-cnc-docs/source'
 let g:netrw_dirhist_3='/home/jmyers/dotfiles-linux/zsh/func'
 let g:netrw_dirhist_4='/home/jmyers/.zsh'
+let g:netrw_dirhist_5='/home/jmyers/dev/users/src/plugins/users'
