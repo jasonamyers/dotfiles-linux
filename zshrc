@@ -131,6 +131,8 @@ export LOCALEMMA_AUDIENCE_BASE_DIR=~/dev/audience/../
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export JAVA_HOME=/usr/java/default/
+export PATH="$PATH:$JAVA_HOME"
 
 export TERM="xterm-256color"
 #
