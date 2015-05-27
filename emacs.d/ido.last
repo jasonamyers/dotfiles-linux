@@ -1,0 +1,69 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/jasomyer/" . ".emacs.d/")
+ ("/home/jasomyer/dev/macerate/docs/" . "source/")
+ ("/home/jasomyer/dev/pulphandler/docs/" . "source/")
+ ("/home/jasomyer/dev/pulphandler/" . "pulphandler/")
+ ("/home/jasomyer/dev/macerate/" . "macerate/")
+ ("/home/jasomyer/dev/" . "pulphandler/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jasomyer/.emacs.d/"
+ "/home/jasomyer/dev/pulphandler/pulphandler/"
+ "/home/jasomyer/dev/macerate/macerate/"
+ "/home/jasomyer/dev/combinator-cli/"
+ "/home/jasomyer/dev/combinator-api/"
+ "/home/jasomyer/dev/macerate/docs/source/"
+ "/home/jasomyer/dev/macerate/"
+ "/home/jasomyer/dev/pulphandler/docs/source/"
+ "/home/jasomyer/dev/pulphandler/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "pulp_handler.py"
+ "package_handler.py"
+ "command.py"
+ "setup.py"
+ "conf.py"
+ "setup.cfg"
+ "default_settings.py"
+ "__init__.py"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jasomyer/.emacs.d/" (21861 54490 527467 636000) "./" "backups/" "url/" "../" "diary" "bbdb" "init.el~" "gnus/" "#diary#" "elpa/" "ido.last" "init.el" "session.106e4521738728214143257387492520400000019250041" "places" "auto-save-list/")
+
+ ("/home/jasomyer/" (21861 58496 929965 265000) ".zshrc" "./" ".android/" ".viminfo" ".devpi/" ".ipython/" ".ansible/" ".bashrc" "../" ".vimrc" ".webex/" ".dropbox/" ".bash_profile" ".hooks/" ".ccache/" ".jshintrc" ".dunstrc" ".gstreamer-0.10/" "Desktop/" "Videos/" ".local/" ".history" ".cups/" ".pyenv/" ".emacs.d/" ".pki/" "Music/" ".bash_profile.backup" ".thunderbird/" "Downloads/" "Public/" ".gnupg/" ".adobe/" "Templates/" "Mail/" ".macromedia/" ".zsh-update" ".bash_history" ".lastpass/" "Dropbox/" ".purple/" ".gnome/" "elisp/" ".git_template/" ".gnome2/" ".psqlrc" ".ilg-config" ".java/" ".ICEauthority" ".bashrc.backup" "Library/" "Documents/" ".ssh/" ".config/" ".gitconfig" ".bash_logout" "VirtualBox VMs/" ".esd_auth" ".vagrant.d/" ".zsh/" ".cache/" ".mplayer/" "slim-dots/" ".vim/" ".fonts/" ".hgrc" ".mozilla/" ".pdbrc" "dotfiles/" "Pictures/" ".oh-my-zsh/" "Photos/" "site.retry" ".tmux.conf" ".jellybeans.sh" ".dropbox-dist/" "dotfiles-linux/" "dev/" "intellinuxgraphics-repo.noarch.rpm" ".virtualenvs/" ".PyCharm40/" ".dbus/" ".zcompdump-rtp-jasomyer-8818-5.0.7" ".gitconfig.backup")
+
+ ("/home/jasomyer/dev/pulphandler/pulphandler/" (21861 55789 46084 853000) "./" "../" "request_handler.py" "pulp_handler.py" "__init__.py" "rpm_handler.py" "default_settings.py" "logger.pyc" "rpm_handler.pyc" "pulp_handler.pyc" "logger.py" "request_handler.pyc" "default_settings.pyc" "__init__.pyc")
+
+ ("/home/jasomyer/dev/pulphandler/" (21861 55789 37084 896000) "./" "../" ".git/" "tests/" "requirements.txt" "docs/" ".gitreview" ".gitignore" "pytest.ini" "pulphandler.logger.log" "setup.py" "dist/" "requirements-dev.txt" "pulphandler/" "README.txt" "setup.cfg")
+
+ ("/home/jasomyer/dev/macerate/macerate/" (21861 56653 632869 961000) "./" "../" "#command.py#" "__init__.py" "package_handler.py" "package_handler.pyc" "logger.pyc" ".#command.py" "logger.py" "command.py" "__init__.pyc")
+
+ ("/home/jasomyer/dev/macerate/" (21861 55984 423132 383000) "./" "../" ".git/" "tests/" "requirements.txt" "docs/" ".gitreview" ".gitignore" "macerate.logger.log" "pytest.ini" "pulphandler.logger.log" "setup.py" "macerate/" "dist/" "requirements-dev.txt" "README.txt" "setup.cfg")
+
+ ("/home/jasomyer/dev/combinator-cli/" (21861 54898 797447 122000) "./" "../" ".git/" "combinatorcli/" "tests/" "tox.ini" "requirements.txt" "docs/" ".gitreview" ".gitignore" "pytest.ini" "setup.py" "requirements-dev.txt" "setup.cfg")
+
+ ("/home/jasomyer/dev/combinator-api/" (21861 54880 483536 872000) "combinatorapi/" "./" "../" ".git/" "requirements.txt" "docs/" ".gitreview" ".gitignore" ".coveragerc" "setup.py" "requirements-dev.txt" "README.md" "setup.cfg" "MANIFEST.in")
+
+ ("/home/jasomyer/dev/macerate/docs/source/" (21861 54736 525242 360000) "./" "../" "usage.rst" "overview.rst" "package_handler.rst" "index.rst" "conf.py")
+
+ ("/home/jasomyer/dev/macerate/docs/" (21861 51219 490546 629000) "./" "../" "make.bat" "source/" "Makefile")
+
+ ("/home/jasomyer/dev/pulphandler/docs/source/" (21861 54408 330877 212000) "./" "rpm_handler.rst" "../" "config.rst" "usage.rst" "overview.rst" "request_handler.rst" "pulp_handler.rst" "index.rst" "conf.py")
+
+ ("/home/jasomyer/dev/pulphandler/docs/" (21861 51211 557585 543000) "./" "../" "make.bat" "source/" "Makefile")
+
+ ("/home/jasomyer/dev/" (21861 51237 342459 59000) "./" "../" "sa-book-dev/" "ceph-redstone-ansible/" "ceilometer/" "combinator-api/" "macerate/" "sa-book/" "ceilometermiddleware/" "pulphandler/" "python-ceilometerclient/" "jam-rhel-dev/" "combinator-cli/" "ceilometer-specs/" "yummy/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

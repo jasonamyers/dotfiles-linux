@@ -39,6 +39,5 @@ tags
 bundle
 
 virtualenv
-emacs.d
 .netrwhist
 config
