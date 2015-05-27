@@ -95,7 +95,7 @@ export HISTIGNORE="&:[ ]*:ls:ll:la:l:cd:pwd:exit:mc:su:df:clear"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git, fabric, pip, redis-cli, sublime, tmux)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/func/soma_fm
@@ -106,12 +106,13 @@ export PERL5LIB=$PERL5LIB:~/perl5/lib/perl5
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 export PYVER_ROOT=`pyenv prefix`
 export PYVER_BIN="$PYVER_ROOT/bin"
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 nvm use 0.10
-export WORKON_HOME=$HOME/.virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=`which python`
 export PROJECT_HOME=$HOME/dev
 if [[ -r $PYVER_BIN/virtualenvwrapper.sh ]]; then

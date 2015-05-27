@@ -11,6 +11,10 @@ if has("autocmd")
 " Spell Check When Writing Commit Logs:
   autocmd FileType svn,*commit* setlocal spell
 
+" Spell Check and Wrap When Writing Asciidoc:
+  autocmd FileType asciidoc setlocal spell
+  autocmd FileType asciidoc set wrap
+
 " Remove Trailing Whitespace On Save:
   autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
